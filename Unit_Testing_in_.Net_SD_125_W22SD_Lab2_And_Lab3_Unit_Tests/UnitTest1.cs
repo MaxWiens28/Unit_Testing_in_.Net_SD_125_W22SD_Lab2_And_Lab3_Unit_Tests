@@ -15,7 +15,8 @@ namespace Unit_Testing_in_.Net_SD_125_W22SD_Lab2_And_Lab3_Unit_Tests
                 new Vehicle{ID = 1, PassID = 1, Parked = true},
                 new Vehicle{ID = 2, PassID = 2, Parked = false},
                 new Vehicle{ID = 3, PassID = 3, Parked = true},
-                new Vehicle{ID = 4, PassID = 4, Parked = false}
+                new Vehicle{ID = 4, PassID = 4, Parked = false},
+                new Vehicle{ID = 5, PassID = 5, Parked = false}
             }.AsQueryable();
 
         var mockDbSet = new Mock<DbSet<Vehicle>>();
@@ -33,7 +34,8 @@ namespace Unit_Testing_in_.Net_SD_125_W22SD_Lab2_And_Lab3_Unit_Tests
                 new Pass{ID = 1, Purchaser = "Max", Premium = true, Capacity = 20},
                 new Pass{ID = 2, Purchaser = "Ludwig", Premium = false, Capacity  =15},
                 new Pass{ID = 3, Purchaser = "Chad", Premium = true, Capacity = 5},
-                new Pass{ID = 4, Purchaser = "Steven", Premium = false, Capacity = 10}
+                new Pass{ID = 4, Purchaser = "Steven", Premium = false, Capacity = 10},
+                new Pass{ID = 5, Purchaser = "Mike", Premium = false, Capacity = 100}
             }.AsQueryable();
 
         var mockDbSet = new Mock<DbSet<Pass>>();
@@ -52,6 +54,7 @@ namespace Unit_Testing_in_.Net_SD_125_W22SD_Lab2_And_Lab3_Unit_Tests
                 new ParkingSpot{ID = 2, Occupied = false},
                 new ParkingSpot{ID = 3, Occupied = true},
                 new ParkingSpot{ID = 4, Occupied = false}
+                new ParkingSpot{ID = 5, Occupied = false}
             }.AsQueryable();
 
         var mockDbSet = new Mock<DbSet<ParkingSpot>>();
@@ -70,6 +73,7 @@ namespace Unit_Testing_in_.Net_SD_125_W22SD_Lab2_And_Lab3_Unit_Tests
                 new Reservation{ID = 2, ParkingSpotID = 2, VehicleID = 2, VehicleID = new DateTime(2022, 11, 11), IsCurrent = false},
                 new Reservation{ID = 3, ParkingSpotID = 3, VehicleID = 3, VehicleID = new DateTime(2022, 1, 2), IsCurrent = true},
                 new Reservation{ID = 4, ParkingSpotID = 4, VehicleID = 4, VehicleID = new DateTime(2022, 2, 5), IsCurrent = false}
+                new Reservation{ID = 5, ParkingSpotID = 5, VehicleID = 5, VehicleID = new DateTime(2021, 4, 6), IsCurrent = false}
             }.AsQueryable();
 
         var mockDbSet = new Mock<DbSet<Reservation>>();
